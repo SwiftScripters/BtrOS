@@ -1,0 +1,27 @@
+- name: Auto Assign Issues/PRs
+  # You may pin to the exact commit or the version.
+  # uses: wow-actions/auto-assign@67fafa03df61d7e5f201734a2fa60d1ab111880d
+  uses: wow-actions/auto-assign@v3.0.2
+  with:
+    # Your GitHub token for authentication.
+    GITHUB_TOKEN: 
+    # Set to true to add reviewers to PRs.
+    addReviewers: # optional, default is true
+    # Set to true to add assignees to PRs.
+    addAssignees: # optional, default is true
+    # A list of reviewers(GitHub user name) to be added to PRs.
+    reviewers: # optional
+    # A list of assignees(GitHub user name) to be added to issue/PR. Uses `reviewers` if not set.
+    assignees: # optional
+    # Number of reviewers added to the PR. Set `0` to add all the reviewers (default `0`).
+    numberOfReviewers: # optional, default is 0
+    # Number of assignees added to the PR. Set `0` to add all the assignees (default `0`). Uses `numberReviewers` if not set.
+    numberOfAssignees: # optional, default is 0
+    # A list of keywords to be skipped the process if PR's title include it.
+    skipKeywords: # optional
+    # Set to `false` to run on draft PRs.
+    skipDraft: # optional, default is true
+    # Only to run when issue/PR has one of the label.
+    includeLabels: # optional
+    # Not to run when issue/PR has one of the label.
+    excludeLabels: # optional
